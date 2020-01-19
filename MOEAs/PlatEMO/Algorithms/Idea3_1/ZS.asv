@@ -1,0 +1,7 @@
+function ZS = ZS(Objs,K)
+%ZS 此处显示有关此函数的摘要
+%   此处显示详细说明
+    d = (z_nad-z_star+2*sigma)/K;
+    ZS = Objs;
+end
+
