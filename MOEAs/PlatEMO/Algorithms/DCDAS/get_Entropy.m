@@ -1,4 +1,4 @@
-function entropy = get_Entropy(Population)
+function ent = get_Entropy(Population)
 %GET_ENTROPY 此处显示有关此函数的摘要
 %   此处显示详细说明
     objs = Population.objs;
