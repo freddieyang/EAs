@@ -32,17 +32,17 @@ function Draw(Data,varargin)
     if get(gca,'Position') <= [inf inf 400 300]
         Size = [3 5 .8 8];
     else
-        Size = [6 8 0.1 13];
+        Size = [6 8 2 13];
     end
     
     %% The styple of the figure
     if nargin < 2
         if M == 2
-            varargin = {'ok','MarkerSize',Size(1),'Marker','o','Markerfacecolor',[1 1 1],'Markeredgecolor',[1 0 0]};
+            varargin = {'ok','MarkerSize',Size(1),'Marker','o','Markerfacecolor',[.7 .7 .7],'Markeredgecolor',[.4 .4 .4]};
         elseif M == 3
             varargin = {'ok','MarkerSize',Size(2),'Marker','o','Markerfacecolor',[.7 .7 .7],'Markeredgecolor',[.4 .4 .4]};
         elseif M > 3
-            varargin = {'Color',[0 0 1],'LineWidth',Size(3)};
+            varargin = {'Color',[.5 .5 .5],'LineWidth',Size(3)};
         end
     end
     

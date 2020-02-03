@@ -15,7 +15,7 @@ function DCDAS(Global)
         Offspring  = GA(Population(MatingPool));
         ent = get_Entropy(Population);
         delta_ent = ent - entp;
-        entp = ent;
+        entp = ent/log(N*M);
 %         dist = Distribution(FrontNo,N);
         S = 0.5 - delta_ent;
         [Population,FrontNo,CrowdDis] = EnvironmentalSelection([Population,Offspring],Global.N,S*ones(1,N));
