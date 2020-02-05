@@ -14,10 +14,10 @@ function DCDAS(Global)
         MatingPool = TournamentSelection(2,Global.N,FrontNo,-CrowdDis);
         Offspring  = GA(Population(MatingPool));
         ent = get_Entropy(Population);
-        delta_ent = ent - entp
-        entp = ent/log(N*M);
+        delta_ent = ent - entp;
+        entp = ent;
 %         dist = Distribution(FrontNo,N);
-        S = 0.5 - delta_ent;
+        S = 0.5 - delta_ent/log(N*M);
         [Population,FrontNo,CrowdDis] = EnvironmentalSelection([Population,Offspring],Global.N,S*ones(1,N));
     end
 end

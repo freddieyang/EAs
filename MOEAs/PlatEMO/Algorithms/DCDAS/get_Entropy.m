@@ -12,10 +12,11 @@ function ent = get_Entropy(Population)
             cell = sum(ismember(C(:,m),k));
             p = cell/(K*M);
             if p~=0
-                ent = -ent+p*log(p);
+                ent = ent+p*log(p);
             end
         end
     end
+    ent = -ent;
 end
 
 
